@@ -3,7 +3,8 @@ wp-config.php
 .htaccess
 
 # Ignore the wp-content directory
-/wp-content
+!/wp-content
+/wp-content/*
 
 # Don’t ignore themes dir, but ignore everything inside
 !/wp-content/themes
