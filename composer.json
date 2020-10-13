@@ -1,0 +1,49 @@
+{
+    "name": "bonkaroo2/new-website",
+    "description": "Plugins and themes I start every project with",
+    "version": "1.0",
+    "homepage": "https://bonkaroo.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Moriarty",
+            "email": "pm250624@gmail.com"
+        }
+    ],
+      "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+		"aws/aws-sdk-php":"*",
+        	"wpackagist-plugin/advanced-custom-fields":"*",
+	        "wpackagist-plugin/akismet":"*",
+        	"wpackagist-plugin/duplicator": "*",
+	        "wpackagist-plugin/feedzy-rss-feeds":"*",
+        	"wpackagist-plugin/foogallery":"*",
+            "wpackagist-plugin/hueman-addons":"*",
+            "wpackagist-plugin/jetpack":"9.0.2",
+        	"wpackagist-plugin/jquery-smooth-scroll":"*",
+	        "wpackagist-plugin/media-library-assistant":"*",
+        	"wpackagist-plugin/really-simple-ssl":"*",
+	        "wpackagist-plugin/responsive-lightbox":"*",
+        	"wpackagist-plugin/simple-history":"*",
+	        "wpackagist-plugin/the-events-calendar":"*",
+	        "wpackagist-plugin/w3-total-cache": "*",
+	        "wpackagist-plugin/wordpress-seo":"*",
+	        "wpackagist-plugin/wp-file-manager":"*",
+	        "wpackagist-plugin/wp-migrate-db":"*",
+	        "wpackagist-plugin/wpforms-lite":"*",
+	        "wpackagist-theme/hueman":"*",
+                "wpackagist-theme/astra":"*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    }
+
+}
+
