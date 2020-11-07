@@ -265,7 +265,7 @@ function displayTable ($inStateCd) {
 
 global $wpdb;
 
-$sqlStatementSubtitle = "SELECT * FROM coviddata_state_chg Where fips=".$inStateCd." and period_days=7";
+$sqlStatementSubtitle = "SELECT * FROM covidrpt_state_chg Where fips=".$inStateCd." and period_days=7";
 $result = $wpdb->get_results( $sqlStatementSubtitle);
 
 // echo '<pre>';
@@ -276,7 +276,8 @@ $result = $wpdb->get_results( $sqlStatementSubtitle);
 
 $subTitle = $result[0]->description;
 
-$sqlStatement="SELECT * FROM coviddata_state_chg_History_V Where fips=".$inStateCd." order by date_end desc";
+$sqlStatement="SELECT * FROM covidrpt_state_History Where period_days=7 and fips=".$inStateCd." order by date_end desc";
+
 
 
 
@@ -342,8 +343,8 @@ $sqlStatement="SELECT * FROM coviddata_state_chg_History_V Where fips=".$inState
 
 
 
+add_action( 'wp_ajax_nopriv_jp_ajax_test', 'slug_ajax_callback' );
 add_action( 'wp_ajax_jp_ajax_test', 'slug_ajax_callback' );
-add_action( 'wp_ajax_no_ppriv_jp_ajax_test', 'slug_ajax_callback' );
 function slug_ajax_callback() {
 
 	
@@ -379,7 +380,7 @@ function displayTable1 ($inDataSet) {
 
 global $wpdb;
 
-$sqlStatement = "SELECT * FROM coviddata_state_chg Where period_days=".$inDataSet." order by date_end desc, section, casesPer100k desc";
+$sqlStatement = "SELECT * FROM covidrpt_state_chg Where period_days=".$inDataSet." order by date_end desc, section, casesPer100k desc";
 
 
 
